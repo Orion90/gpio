@@ -1,3 +1,6 @@
+#ifndef GPIO__h
+#define GPIO__h
+
 #define HIGH 1
 #define LOW 0
 #define ON 1
@@ -6,7 +9,7 @@ typedef struct GPIO_PIN{
 	int const map;
 	char const folder[13];
 	int is_active,direction,value;
-} x;
+} GPIO_PIN;
 struct GPIO_PIN GPIO_PD1 = {1,"gpio1_pd1",0};
 struct GPIO_PIN GPIO_PD2 = {2,"gpio2_pd2",0};
 struct GPIO_PIN GPIO_PD3 = {3,"gpio3_pd3",0};
@@ -41,3 +44,5 @@ struct GPIO_PIN GPIO_PI10 = {31,"gpio31_pi10",0};
 struct GPIO_PIN GPIO_PI11 = {32,"gpio32_pi11",0};
 struct GPIO_PIN GPIO_PI12 = {33,"gpio33_pi12",0};
 struct GPIO_PIN GPIO_PI13 = {34,"gpio34_pi13",0};
+
+#endif
