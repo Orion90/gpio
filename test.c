@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "GPIO.h"
+#define LED &GPIO_PD1
 int main(int argc, char ** argv){
-        GPIOInitPin(&GPIO_PD1,0);
+        GPIOInitPin(LED,0);
         while(1){
-                GPIOWritePin(&GPIO_PD1,1);
+                GPIOWritePin(LED,1);
                 usleep(100000);
-                GPIOWritePin(&GPIO_PD1,0);
+                GPIOWritePin(LED,0);
                 usleep(100000);
         }
         return 0;
