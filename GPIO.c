@@ -66,6 +66,6 @@ int GPIOReadPin(struct GPIO_PIN *pin){
 	return atoi(set_value);
 }
 int main(){
-	GPIOInitPin(&GPIO_PH7,0);
-	GPIOWritePin(&GPIO_PH7,HIGH);
+	GPIOInitPin(&GPIO_PD1,0);
+	GPIOWritePin(&GPIO_PD1,HIGH);
 }
