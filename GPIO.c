@@ -1,10 +1,3 @@
-/**
-cd /sys/class/gpio
-echo 34 > export
-cd gpio34_pi13
-echo out > direction
-echo 1 > value
-*/
 #include <stdio.h>
 #include <sys/types.h>
 #include <dirent.h>
