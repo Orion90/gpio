@@ -65,12 +65,3 @@ int GPIOReadPin(struct GPIO_PIN *pin){
 	fclose(fp);
 	return atoi(set_value);
 }
-int main(){
-	GPIOInitPin(&GPIO_PD1,0);
-	while(1){
-		GPIOWritePin(&GPIO_PD1,HIGH);
-		usleep(100000);
-		GPIOWritePin(&GPIO_PD1,LOW);
-		usleep(100000);
-	}
-}

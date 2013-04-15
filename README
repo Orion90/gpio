@@ -1,0 +1,3 @@
+GPIO
+
+A C wrapper library for using GPIO on Cubieboard based on a Linaro Ubuntu image found on the Miniand CubieBoard Development Forum https://www.miniand.com/forums/forums/development--5/topics/linaro-ubuntu-custom-server-images-armhf by Toby Corkindale.
