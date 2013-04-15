@@ -51,6 +51,20 @@ int GPIOWritePin(struct GPIO_PIN *pin,int value){
 	fclose(fp);
 	pin->value = value;
 }
+int GPIOReadPin(struct GPIO_PIN *pin){
+	if(pin->direction != 1)
+		return -1;
+	else if(!pin->is_active)
+		return -2;
+	FILE *fp;
+	char set_value[10];
+	char dir_file[40];
+	sprintf(dir_file,"/sys/class/gpio/%s/value",pin->folder);
+	fp = fopen(dir_file,"ab");
+	fread(set_value, 1, 1, fp);
+	fclose(fp);
+	return atoi(set_value);
+}
 int main(){
 	GPIOInitPin(&GPIO_PH7,0);
 	GPIOWritePin(&GPIO_PH7,HIGH);
