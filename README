@@ -2,7 +2,7 @@ GPIO
 
 A C wrapper library for using GPIO on Cubieboard based on a Linaro Ubuntu image found on the Miniand CubieBoard Development Forum https://www.miniand.com/forums/forums/development--5/topics/linaro-ubuntu-custom-server-images-armhf by Toby Corkindale.
 
-Try it out by connecting a LED, with proper resistor, to pin 4(Anode/PD1) and pin 2(Cathode/GND).
+Try it out by connecting a LED, with proper resistor in series, to pin 4(Anode/PD1) and pin 2(Cathode/GND).
 
 Compile with
 gcc GPIO.c test.c -o test
